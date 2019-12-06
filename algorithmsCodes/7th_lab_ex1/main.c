@@ -27,7 +27,7 @@ int main()
     producer_t *head;
     printf("enter the two files' names\n");
     scanf("%s %s",s1,s2);
-    head =read_producer_file(s1);
+        head =read_producer_file(s1);
     //read_product_file(s2,head);
     printf("agbgr");
     return 0;
@@ -38,20 +38,22 @@ producer_t* read_producer_file(char *file_name)
     char name[20],id[20];
     int n=0;
     FILE*fp;
+    producer_t* p=NULL,*head=NULL;
     fp=fopen(file_name,"r");
     if(fp==NULL)
     {
         fprintf(stderr,"error reading the file");
         exit(1);
     }
-    producer_t* p,*head=NULL;
     while(fscanf(fp,"%s %s",name, id)!=EOF)
     {
         ++n;
         if(head==NULL)
         {
-            head=malloc(sizeof(producer_t));
-            if(head ==NULL){
+            printf("The size of the struct is %d\n",sizeof(producer_t));
+            head=(producer_t*)malloc(sizeof(producer_t));
+            if(head ==NULL)
+            {
                 fprintf(stderr,"error of allocation memory");
                 exit(1);
             }
@@ -59,19 +61,25 @@ producer_t* read_producer_file(char *file_name)
             head->head_product=NULL;
             p=head;
             //sscanf(line,"%s %s",p->name,p->id);
+            p->name = (char*)malloc(sizeof(char)*strlen(name));
+            p->id = (char*) malloc(sizeof(char)*strlen(id));
             strcpy(p->name,name);
             strcpy(p->id,id);
             printf("name %s id %s\n",p->name,p->id);
         }
-        if(head!=NULL)
+        else
         {
-            p->next=malloc(sizeof(producer_t));
-            if(p->next==NULL){
+            // printf("The pointer of P is %p\n",p);
+            p->next=(producer_t*)malloc(sizeof(struct producer));
+            if(p->next==NULL)
+            {
                 fprintf(stderr,"alloction error\n");
                 exit(1);
             }
             p=p->next;
             //sscanf(line,"%s %s",p->name,p->id);
+            p->name = (char*)malloc(sizeof(char)*strlen(name));
+            p->id = (char*) malloc(sizeof(char)*strlen(id));
             strcpy(p->name,name);
             strcpy(p->id,id);
             printf("name %s id %s",p->name,p->id);
