@@ -11,8 +11,9 @@ int main()
     printf("enter the two files' names\n");
     scanf("%s %s", s1, s2);
     head = read_producer_file(s1);
-    //read_product_file(s2,head);
-    printf("agbgr");
+    read_product_file(s2, head);
+    print_t(head);
+
     return 0;
 }
 
@@ -20,11 +21,11 @@ producer_t *read_producer_file(char *file_name)
 {
     char name[20], id[20];
     int n = 0;
-    FILE *fp=NULL;
+    FILE *fp = NULL;
     producer_t *p = NULL;
     producer_t *head = NULL;
     fp = fopen(file_name, "r");
-    
+
     if (fp == NULL)
     {
         fprintf(stderr, "error reading the file");
@@ -76,4 +77,73 @@ producer_t *read_producer_file(char *file_name)
     printf("n=%d", n);
     fclose(fp);
     return (head);
+}
+
+void read_product_file(char *name, producer_t *head)
+{
+    char id[20] = {'\0'};
+    char type[20] = {'\0'};
+    float price = 0;
+    producer_t *ptr;
+    product_t *p;
+    FILE *fp = NULL;
+    fp = fopen(name, "r");
+    if (fp == NULL)
+    {
+        fprintf(stderr, "error opening the file 2");
+    }
+    while (fscanf(fp, "%s %s %f", id, type, &price) != EOF)
+    {
+        for (ptr = head; ptr != NULL; ptr = ptr->next)
+        {
+            if (strcmp(id, ptr->id) == 0)
+            {
+                if (ptr->head_product == NULL)
+                {
+                    ptr->head_product = malloc(sizeof(product_t));
+                    strcpy(ptr->head_product->id, id);
+                    strcpy(ptr->head_product->type, type);
+                    ptr->head_product->price = price;
+                    p = ptr->head_product;
+                    p->next = NULL;
+                }
+                else
+                {
+                    p->next = malloc(sizeof(product_t));
+                    p = p->next;
+                    p->next = NULL;
+                    strcpy(p->id, id);
+                    strcpy(p->type, type);
+                    p->price = price;
+                }
+            }
+        }
+    }
+
+    return;
+}
+
+
+
+void print_t(producer_t *head)
+{
+    char name[20];
+    producer_t *ptr = NULL;
+    product_t* p;
+    printf("enter the name of the product and press stop to end");
+    scanf("%s",name);
+    while (strcmp(strlwr(name), "stop") != 0)
+    {
+        for(ptr=head;ptr!=NULL;ptr=ptr->next){
+            if(strcmp(strlwr(name),strlwr(ptr->name))==0){
+                printf("the id %s\n",ptr->id);
+                for(p=ptr->head_product;p !=NULL;p=p->next){
+                    printf("type %s price %f",p->type,p->price);
+                }
+            }
+        }
+        scanf("%s",name);
+    }
+
+    return;
 }

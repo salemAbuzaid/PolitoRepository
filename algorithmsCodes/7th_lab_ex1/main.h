@@ -4,8 +4,8 @@
 
 typedef struct product
 {
-    char *id;
-    char *type;
+    char id[20];
+    char type[20];
     float price;
     struct product *next;
 } product_t;
@@ -20,6 +20,6 @@ typedef struct producer
 
 producer_t* read_producer_file(char *);
 void read_product_file(char *,producer_t *);
-
+void print_t(producer_t*);
 
 #endif
