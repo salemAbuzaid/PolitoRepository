@@ -23,6 +23,7 @@ int main()
     char name1[size_name+1],name2[size_name+1],name3[size_name+1];
     printf("enter files' names\n");
     scanf("%s %s %s",name1,name2,name3);
+    printf("%s %s %s\n",name1,name2,name3);
     read_file(name1,rect,&n);
     printf("Hello world %d!\n",n);
     return 0;
@@ -31,7 +32,7 @@ int main()
 void read_file(char name[],rect_t rect[],int* n)
 {
     float x,y;
-    int i,flag=0;
+    int i,flag;
     char line[size_name+1];
     char title[size_name+1];
     FILE *fp;
@@ -42,11 +43,13 @@ void read_file(char name[],rect_t rect[],int* n)
         exit(1);
     }
     *n=0;
-    while(fgets(line,size_name,fp)!=EOF){
-
+    while(fgets(line,size_name,fp)!=NULL){
+        printf("line %s",line);
         sscanf(line,"%s %f %f",title,&x,&y);
+        printf("**%s  %f  %f\n",title,x,y);
         if(strcmp(title,rect[*n].name)!=0)
         {
+            flag=0;
             for(i=0; i<*n; ++i)
             {
                 if(strcmp(title,rect[i].name)==0)
@@ -65,8 +68,8 @@ void read_file(char name[],rect_t rect[],int* n)
         }
         ++*n;
     }
-    for(i=0;i<*n;++i){
+      for(i=0;i<*n/2;++i){
         printf("%s   %f  %f",rect[i].name,rect[i].x1,rect[i].y1);
-        printf("       %f   %f",rect[i].x2,rect[i].y2);
+        printf("       %f   %f\n",rect[i].x2,rect[i].y2);
     }
 }

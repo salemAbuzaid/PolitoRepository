@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1574678246 source:d:\politorepository\algorithmscodes\8th_lab_ex1\new.c
+	<stdlib.h>
+	"new.h"
+
+1574678142 source:d:\politorepository\algorithmscodes\8th_lab_ex1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"new.h"
+
+1574678145 d:\politorepository\algorithmscodes\8th_lab_ex1\new.h
+
