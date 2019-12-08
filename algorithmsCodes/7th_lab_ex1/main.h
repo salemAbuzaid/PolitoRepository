@@ -21,5 +21,5 @@ typedef struct producer
 producer_t* read_producer_file(char *);
 void read_product_file(char *,producer_t *);
 void print_t(producer_t*);
-
+void dispose(producer_t*);
 #endif

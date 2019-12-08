@@ -13,6 +13,7 @@ int main()
     head = read_producer_file(s1);
     read_product_file(s2, head);
     print_t(head);
+    dispose(head);
 
     return 0;
 }
@@ -36,7 +37,7 @@ producer_t *read_producer_file(char *file_name)
         ++n;
         if (head == NULL)
         {
-            printf("The size of the struct is %d\n", sizeof(producer_t));
+            // printf("The size of the struct is %d\n", sizeof(producer_t));
             head = (producer_t *)malloc(sizeof(producer_t));
             if (head == NULL)
             {
@@ -51,7 +52,7 @@ producer_t *read_producer_file(char *file_name)
             p->id = (char *)malloc(sizeof(char) * strlen(id));
             strcpy(p->name, name);
             strcpy(p->id, id);
-            printf("name %s id %s\n", p->name, p->id);
+            //printf("name %s id %s\n", p->name, p->id);
         }
         else
         {
@@ -68,13 +69,13 @@ producer_t *read_producer_file(char *file_name)
             p->id = (char *)malloc(sizeof(char) * strlen(id));
             strcpy(p->name, name);
             strcpy(p->id, id);
-            printf("name %s id %s", p->name, p->id);
-            printf("basgib\n");
+            //printf("name %s id %s", p->name, p->id);
+            //printf("basgib\n");
             p->next = NULL;
             p->head_product = NULL;
         }
     }
-    printf("n=%d", n);
+    //printf("n=%d", n);
     fclose(fp);
     return (head);
 }
@@ -115,7 +116,9 @@ void read_product_file(char *name, producer_t *head)
                     strcpy(p->id, id);
                     strcpy(p->type, type);
                     p->price = price;
+                    printf("id %s type %s price %f",p->id,p->type,p->price);
                 }
+
             }
         }
     }
@@ -130,7 +133,7 @@ void print_t(producer_t *head)
     char name[20];
     producer_t *ptr = NULL;
     product_t* p;
-    printf("enter the name of the product and press stop to end");
+    printf("enter the name of the product and press stop to end\n");
     scanf("%s",name);
     while (strcmp(strlwr(name), "stop") != 0)
     {
@@ -138,11 +141,25 @@ void print_t(producer_t *head)
             if(strcmp(strlwr(name),strlwr(ptr->name))==0){
                 printf("the id %s\n",ptr->id);
                 for(p=ptr->head_product;p !=NULL;p=p->next){
-                    printf("type %s price %f",p->type,p->price);
+                    printf("type %s price %f\n",p->type,p->price);
                 }
             }
         }
         scanf("%s",name);
+    }
+
+    return;
+}
+
+
+void dispose(producer_t* head){
+    producer_t* ptr=NULL;
+    product_t *p=NULL;
+    for(ptr=head;ptr!=NULL; ptr=ptr->next){
+        for(p=ptr->head_product;p!=NULL;p=p->next){
+            free(p);
+        }
+        free(ptr);
     }
 
     return;

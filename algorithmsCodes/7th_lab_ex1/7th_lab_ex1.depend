@@ -1,6 +1,9 @@
 # depslib dependency file v1.0
-1575651016 source:d:\politorepository\algorithmscodes\7th_lab_ex1\main.c
+1575671459 source:d:\politorepository\algorithmscodes\7th_lab_ex1\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
+	"main.h"
+
+1575669378 d:\politorepository\algorithmscodes\7th_lab_ex1\main.h
 
