@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1575811525 source:d:\politorepository\algorithmscodes\7th_lab_ex2_a\main.c
+	<stdio.h>
+	<stdlib.h>
+	"header.h"
+
+1575803989 d:\politorepository\algorithmscodes\7th_lab_ex2_a\header.h
+
