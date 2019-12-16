@@ -1,18 +1,24 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "new.h"
 
 
 int main()
 {
-    int **mat;
-    int n;
-    char name[30];
-    scanf("%d %s",&n,name);
-    allocat(&mat,n);
-    mat[0][0]=2;
-    int val[9]={1,2,3,4,5,6,7,8,9};
-    magic(n,mat,val);
-    printf("Hello world!%d\n",mat[0][0]);
+    int **mat = NULL,*used = NULL,*val = NULL;
+    int n,t;
+    //char name[30];
+    printf("enter the size of the magic matrix\n");
+    scanf("%d",&n);
+    allocat(&mat,&used,&val,n);
+    fillval(val,used,n);
+    /*
+    for(t=0;t<n*n;++t){
+        printf("used=%2d val%2d\n",used[t],val[t]);
+    }*/
+    if(magic(mat,val,used,n,0)){
+        printf("the magic is found\n");
+        printmat(mat,n);
+    }else{
+    printf("magic is not found\n");
+    }
     return 0;
 }
