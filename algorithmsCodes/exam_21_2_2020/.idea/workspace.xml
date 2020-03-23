@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="exam_21_2_2020" targetName="exam_21_2_2020" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e717339d-2df6-40b3-9286-d5bc2176e956" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../12th_lab_ex_A/graph.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../12th_lab_ex_A/graph.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../12th_lab_ex_A/my_work.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../12th_lab_ex_A/my_work.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../12th_lab_ex_A/queue.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../12th_lab_ex_A/queuePrivate.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../12th_lab_ex_A/queuePublic.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../12th_lab_ex_A/util.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../12th_lab_ex_A/util.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exam/util.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exam/util.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../.vscode/launch.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../7th_lab_ex2_B.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../7th_lab_ex2_B/7th_lab_ex2_B.depend" beforeDir="false" afterPath="$PROJECT_DIR$/../7th_lab_ex2_B/7th_lab_ex2_B.depend" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../7th_lab_ex2_B/7th_lab_ex2_B.layout" beforeDir="false" afterPath="$PROJECT_DIR$/../7th_lab_ex2_B/7th_lab_ex2_B.layout" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../7th_lab_ex2_B/bin/Debug/7th_lab_ex2_B.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../7th_lab_ex2_B/bin/Debug/7th_lab_ex2_B.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../7th_lab_ex2_B/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/../7th_lab_ex2_B/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../7th_lab_ex2_B/obj/Debug/main.o" beforeDir="false" afterPath="$PROJECT_DIR$/../7th_lab_ex2_B/obj/Debug/main.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../8th_lab_ex1/8th_lab_ex1.layout" beforeDir="false" afterPath="$PROJECT_DIR$/../8th_lab_ex1/8th_lab_ex1.layout" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../8th_lab_ex1/bin/Debug/8th_lab_ex1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../8th_lab_ex1/bin/Debug/8th_lab_ex1.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../8th_lab_ex1/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/../8th_lab_ex1/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../8th_lab_ex1/new.c" beforeDir="false" afterPath="$PROJECT_DIR$/../8th_lab_ex1/new.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../8th_lab_ex1/obj/Debug/new.o" beforeDir="false" afterPath="$PROJECT_DIR$/../8th_lab_ex1/obj/Debug/new.o" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="D:\PolitoRepository\algorithmsCodes\exam_21_2_2020\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1Y8FhAgUg0gJgWohCi7AwPHqizS" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e717339d-2df6-40b3-9286-d5bc2176e956" name="Default Changelist" comment="" />
+      <created>1582316430803</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1582316430803</updated>
+      <workItem from="1582316435027" duration="1170000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="421" y="87" key="FileChooserDialogImpl" timestamp="1582317699254">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="421" y="87" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1582317699254" />
+    <state x="349" y="170" key="com.intellij.ide.util.TipDialog" timestamp="1582317636513">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="349" y="170" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1582317636513" />
+    <state x="-17" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1582317048603">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="-17" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1582317048603" />
+  </component>
+</project>
